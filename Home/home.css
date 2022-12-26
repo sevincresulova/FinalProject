@@ -1,0 +1,1273 @@
+:root {
+	--Ketchup-color: #da1202;
+	--mustard-color: #f9b044;
+	--off-white-color: #f1eae3;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	font-family: Papercu, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+p {
+	font-size: 1.125rem;
+	line-height: 1.6;
+}
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+}
+
+/* Navbar */
+
+.logo {
+	top: 0;
+	text-align: center;
+	background: var(--Ketchup-color);
+}
+
+.logo h1 {
+	color: white;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+
+#navbar {
+	text-align: center;
+}
+
+#navbar ul {
+	list-style: none;
+}
+
+#navbar ul li {
+	font-weight: 600;
+	color: var(--mustard-color);
+	display: inline-block;
+	padding: 1rem;
+	position: relative;
+}
+
+#navbar ul li a {
+	color: var(--mustard-color);
+	text-decoration: none;
+}
+
+/* Hide nested ul by default*/
+
+#navbar .nested-list {
+	display: none;
+}
+
+#navbar ul li:hover {
+	background: #fcf9f4;
+	color: var(--Ketchup-color);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+#navbar ul li:hover a {
+	color: var(--Ketchup-color);
+	transition: all 0.3s ease;
+}
+
+/* Nested dropdown show*/
+
+#navbar ul li:hover .nested-list {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 150px;
+	margin-top: 1rem;
+	text-align: left;
+}
+
+#navbar ul li:hover .nested-list li {
+	display: block;
+	background: #fcf9f4;
+}
+
+#navbar ul li:hover .nested-list li a {
+	color: var(--mustard-color);
+}
+
+#navbar ul li:hover .nested-list li a:hover {
+	color: var(--Ketchup-color);
+	transition: all 0.3s ease;
+}
+
+/* Header */
+
+.header {
+	background: linear-gradient(to top, black, rgba(0, 0, 0, 0.250)),
+		url(../Assets/images/header.jpg) no-repeat center center/cover;
+	height: 84vh;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	height: 90%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero h1 {
+	color: white;
+	font-size: 4rem;
+	animation: slogan-1 2s steps(22);
+	overflow: hidden;
+	white-space: nowrap;
+	width: 30ch;
+	
+}
+
+.hero p {
+	color: white;
+	font-size: 1.9rem;
+	margin: 30px auto;
+	animation: slogan-2 1.5s steps(22);
+	overflow: hidden;
+	white-space: nowrap;
+	width: 30ch;
+}
+
+.btn {
+	margin: 30px auto;
+	font-size: 1.125rem;
+	font-weight: 600;
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	border: none;
+	background: none;
+	padding: 15px 27px;
+	border-radius: 30px;
+	color: #fff;
+	background: var(--mustard-color);
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+	background: #e59f3d;
+	color: var(--off-white-color);
+	transition: all 0.3s ease;
+
+}
+
+.btn:focus {
+	outline: none;
+}
+
+
+/* Keyframe*/
+@keyframes slogan-1 {
+0% {
+	width: 0ch;
+	opacity: 0.5;
+}
+
+100% {
+	width: 30ch;
+}
+
+}
+
+
+@keyframes slogan-2 {
+	0% {
+		width: 0ch;
+		opacity: 0.5;
+	}
+	
+	100% {
+		width: 30ch;
+	}
+	
+	}
+
+
+
+/* Header - About Us */
+
+.about-us {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	flex-direction: column;
+	height: 90vh;
+	padding: 60px;
+}
+
+.about-us h2 {
+	margin-top: 20px;
+	font-size: 2rem;
+	color: var(--Ketchup-color);
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.about-us div p {
+	color: #333;
+	font-size: 1.3rem;
+	margin: 30px auto;
+	font-weight: 600;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.about-us div .burger-image {
+	width: 30%;
+	border-radius: 30px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.95);
+}
+
+.btn-smaller {
+	cursor: pointer;
+	position: relative;
+	border: none;
+	color: var(--Ketchup-color);
+	background: none;
+	border-radius: 30px;
+	margin: 30px auto;
+	font-size: 1.1rem;
+	font-weight: 600;
+	padding: 10px 20px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-smaller:hover {
+	background: #333;
+	color: #fff;
+	transition: all 0.2s ease;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+	transition: all 0.3s ease;
+}
+
+/* Review */
+
+.container {
+	background: var(--mustard-color);
+	height: 90vh;
+}
+
+.container h2 {
+	color: white;
+	font-size: 2.85rem;
+	text-align: center;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	margin: 100px 0 50px 0;
+}
+
+.costumer {
+	display: flex;
+	flex-direction: row;
+	background: #333;
+	margin: 45px 250px;
+	padding: 35px;
+	border-radius: 15px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.costumer p {
+	color: white;
+	margin-left: 30px;
+	margin-top: 15px;
+}
+
+.costumer img {
+	width: 7%;
+}
+
+.costumer:hover {
+	transition: all 0.3s ease;
+	transform: perspective(1000px) translateZ(15px);
+}
+
+
+/* Footer */
+
+footer {
+	display: flex;
+	justify-content: space-evenly;
+	background: #333;
+}
+
+.information {
+	color: #fff;
+	padding: 30px;
+}
+
+.information h3 {
+	font-weight: lighter;
+	line-height: 2.5;
+}
+
+.information p {
+	font-size: 0.9rem;
+	line-height: 2.5;
+}
+
+/*-------------------------*/
+
+.footer-link {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.25rem;
+	color: #fff;
+	margin-top: 25px;
+	cursor: pointer;
+}
+
+.footer-link i {
+	padding: 10px;
+}
+
+.footer-link:hover {
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+	color: var(--off-white-color);
+}
+
+/*-------------------------*/
+
+.explore {
+	color: #fff;
+	padding: 30px;
+}
+
+.explore h3 {
+	font-weight: lighter;
+	line-height: 2.5;
+}
+
+.explore p a {
+	color: #fff;
+	font-weight: lighter;
+	font-size: 0.9rem;
+	line-height: 1.5;
+}
+
+/* Copyright */
+
+.copyright {
+	background: var(--Ketchup-color);
+	text-align: center;
+}
+
+.copyright p {
+	color: #fff;
+	font-weight: lighter;
+	font-size: 0.8rem;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+/* Mobile */
+
+@media (max-width: 1530px) {
+	/* Costumer review */
+
+	.costumer {
+		margin: 45px 150px;
+		padding: 25px;
+	}
+
+	.costumer img {
+		width: 10%;
+		height: 10%;
+	}
+}
+
+@media (max-width: 1350px) {
+	/* Costumers Review */
+
+	.container {
+		background: var(--mustard-color);
+		height: 90vh;
+	}
+
+	.costumer {
+		margin: 45px 80px;
+		padding: 25px;
+	}
+
+	.costumer img {
+		width: 11%;
+		height: 11%;
+	}
+}
+
+@media (max-width: 1050px) {
+	/* About Us Image */
+
+	.about-us div .burger-image {
+		width: 40%;
+	}
+
+	/* Costumer review */
+
+	.costumer {
+		margin: 45px 80px;
+		padding: 25px;
+	}
+
+	.costumer img {
+		width: 12%;
+		height: 12%;
+	}
+}
+
+@media (max-width: 940px) {
+	/* Header */
+
+	.hero h1 {
+		font-size: 3.5rem;
+	}
+
+	.hero p {
+		color: white;
+		font-size: 2rem;
+	}
+
+	.btn {
+		margin: 20px auto;
+		font-size: 1.2rem;
+		padding: 13px 25px;
+	}
+
+	/* Costumer review */
+
+	.costumer {
+		margin: 45px 70px;
+		padding: 25px;
+	}
+
+	.costumer img {
+		width: 13%;
+		height: 13%;
+	}
+}
+
+@media (max-width: 900px) {
+	/* Costumer review */
+
+	.costumer {
+		margin: 45px 60px;
+		padding: 20px;
+	}
+
+	.costumer img {
+		margin-top: 10px;
+		width: 13%;
+		height: 13%;
+	}
+}
+
+@media (max-width: 870px) {
+	/* Costumer review */
+
+	.costumer {
+		margin: 45px 50px;
+		padding: 20px;
+	}
+
+	.costumer img {
+		width: 13%;
+		height: 13%;
+	}
+}
+
+@media (max-width: 850px) {
+	/* Header */
+
+	.hero h1 {
+		font-size: 3rem;
+	}
+
+	.hero p {
+		color: white;
+		font-size: 1.5rem;
+	}
+
+	.btn {
+		margin: 20px auto;
+		font-size: 1.13rem;
+		padding: 13px 25px;
+	}
+
+	/* Header - About Us */
+
+	.about-us {
+		height: 84vh;
+		padding: 10px;
+	}
+
+	.about-us div p {
+		color: #333;
+		margin: 30px auto;
+	}
+
+	.about-us div .burger-image {
+		width: 50%;
+	}
+
+	/* Review */
+
+	.container {
+		height: 90vh;
+	}
+
+	.container h2 {
+		font-size: 2.5rem;
+	}
+
+	.costumer {
+		margin: 45px 50px;
+		padding: 20px;
+	}
+
+	.costumer p {
+		color: white;
+		margin-top: 0;
+	}
+
+	.costumer img {
+		width: 12%;
+	}
+
+	@media (max-width: 839px) {
+		/* Header - About Us */
+
+		.about-us {
+			height: 84vh;
+		}
+
+		/* Costumer review */
+
+		.costumer {
+			margin: 45px 30px;
+			padding: 20px;
+		}
+
+		.costumer p {
+			margin-top: 0;
+		}
+
+		.costumer img {
+			width: 12%;
+			height: 12%;
+		}
+	}
+
+	@media (max-width: 799px) {
+		/* Header - About Us */
+
+		.about-us {
+			height: 84vh;
+		}
+
+		/* Costumer review */
+		.costumer {
+			margin: 45px 20px;
+			padding: 20px;
+		}
+
+		.costumer p {
+			margin-top: 0;
+		}
+
+		.costumer img {
+			width: 12%;
+			height: 12%;
+		}
+	}
+
+	@media (max-width: 715px) {
+		/* Header */
+
+		.hero h1 {
+			font-size: 3rem;
+		}
+
+		.hero p {
+			color: white;
+			font-size: 1.5rem;
+		}
+
+		.btn {
+			margin: 20px auto;
+			font-size: 1.13rem;
+			padding: 13px 25px;
+		}
+
+		/* Header - About Us */
+
+		.about-us {
+			height: 84vh;
+		}
+
+		.about-us div p {
+			color: #333;
+			margin: 30px auto;
+		}
+
+		/* Review */
+
+		.costumer {
+			margin: 45px 30px;
+			padding: 20px;
+		}
+
+		.costumer p {
+			color: white;
+			margin-top: 0;
+		}
+
+		.costumer img {
+			width: 12%;
+			margin-top: 20px;
+		}
+	}
+
+	@media (max-width: 650px) {
+		/* Header */
+
+		.hero h1 {
+			font-size: 2.7rem;
+		}
+
+		.hero p {
+			font-size: 1.5rem;
+		}
+
+		.btn {
+			padding: 15px 26px;
+		}
+
+		/* Header - About Us */
+
+		.about-us {
+			height: 84vh;
+		}
+
+		.about-us h2 {
+			font-size: 1.8rem;
+		}
+
+		.about-us div p {
+			font-size: 1.125rem;
+		}
+
+		.btn-smaller {
+			font-size: 1.125rem;
+		}
+
+		/* Review */
+
+		.costumer {
+			margin: 45px 20px;
+			padding: 40px;
+		}
+
+		.costumer p {
+			color: white;
+			margin-top: 0;
+		}
+
+		.costumer img {
+			width: 15%;
+			margin-top: 20px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		/* Review */
+
+		.costumer {
+			margin: 45px 10px;
+			padding: 40px;
+		}
+
+		.costumer p {
+			color: white;
+			margin-top: 0;
+		}
+
+		.costumer img {
+			width: 18%;
+			margin-top: 40px;
+		}
+	}
+
+	@media (max-width: 590px) {
+		/* Navbar */
+
+		.logo h1 {
+			font-size: 2.25rem;
+		}
+
+		/* Header */
+
+		.hero {
+			height: 100%;
+		}
+
+		.hero h1 {
+			font-size: 2.4rem;
+			line-height: 1.2;
+		}
+
+		.hero p {
+			font-size: 1.4rem;
+		}
+
+		.btn {
+			margin: 10px auto;
+			font-size: 1.1rem;
+			padding: 12px 24px;
+		}
+
+		/* Header - About Us */
+
+		.about-us {
+			padding: 20px;
+		}
+
+		.about-us h2 {
+			margin: 20px auto;
+			font-size: 1.8rem;
+		}
+
+		.about-us div p {
+			color: #333;
+			font-size: 1.125rem;
+			margin: 20px auto;
+		}
+
+		.about-us div .burger-image {
+			width: 50%;
+			margin: 20px auto;
+		}
+
+		.btn-smaller {
+			margin: 20px auto;
+		}
+
+		/* Review */
+
+		.container {
+			height: 90vh;
+		}
+
+		.container h2 {
+			font-size: 2rem;
+			margin: 80px auto;
+		}
+
+		.costumer {
+			margin: 45px 10px;
+			padding: 30px;
+		}
+
+		.costumer p {
+			font-size: 1rem;
+			margin-top: 0;
+		}
+
+		.costumer img {
+			width: 16%;
+			margin-top: 15px;
+		}
+
+		/* Footer */
+
+		footer {
+			display: flex;
+			justify-content: space-between;
+			background: #333;
+		}
+
+		.information h3 {
+			font-size: 0.9rem;
+			text-decoration: underline;
+		}
+
+		.information p {
+			font-size: 0.8rem;
+			line-height: 2.5;
+		}
+
+		.footer-link {
+			font-size: 1rem;
+		}
+
+		.explore h3 {
+			font-size: 0.9rem;
+			text-decoration: underline;
+		}
+
+		.explore p a {
+			font-size: 0.8rem;
+		}
+
+		/* Copyright */
+
+		.copyright {
+			background: var(--Ketchup-color);
+			text-align: center;
+		}
+
+		.copyright p {
+			color: #fff;
+			font-weight: lighter;
+			font-size: 0.8rem;
+		}
+	}
+
+	@media (max-width: 500px) {
+		/* Navbar */
+
+		.logo h1 {
+			font-size: 2.2rem;
+		}
+
+		/* Header */
+
+		.hero {
+			height: 100%;
+		}
+
+		.hero h1 {
+			font-size: 2rem;
+			line-height: 1.2;
+		}
+
+		.hero p {
+			font-size: 1.2rem;
+		}
+
+		.btn {
+			margin: 10px auto;
+			font-size: 1rem;
+			padding: 10px 22px;
+		}
+
+		/* Header - About Us */
+
+		.about-us {
+			padding: 50px;
+		}
+
+		.about-us h2 {
+			margin: 20px auto;
+			font-size: 1.4rem;
+		}
+
+		.about-us div p {
+			font-size: 1rem;
+			margin: 20px auto;
+		}
+
+		.about-us div .burger-image {
+			width: 60%;
+			margin: 20px auto;
+		}
+
+		.btn-smaller {
+			margin: 20px auto;
+			font-size: 1rem;
+		}
+
+		/* Review */
+
+		.container {
+			height: 90vh;
+		}
+
+		.container h2 {
+			font-size: 1.8rem;
+			margin: 80px auto;
+		}
+
+		.costumer {
+			margin: 45px 40px;
+			padding: 20px;
+		}
+
+		.costumer p {
+			font-size: 1rem;
+			margin-top: 0;
+		}
+
+		.costumer img {
+			width: 16%;
+			margin-top: 50px;
+		}
+
+		/* Footer */
+
+		footer {
+			display: flex;
+			justify-content: space-between;
+			background: #333;
+		}
+
+		.information h3 {
+			font-size: 0.9rem;
+			text-decoration: underline;
+		}
+
+		.information p {
+			font-size: 0.8rem;
+			line-height: 2.5;
+		}
+
+		.footer-link {
+			font-size: 1rem;
+		}
+
+		.explore h3 {
+			font-size: 0.9rem;
+			text-decoration: underline;
+		}
+
+		.explore p a {
+			font-size: 0.8rem;
+		}
+
+		/* Copyright */
+
+		.copyright {
+			background: var(--Ketchup-color);
+			text-align: center;
+		}
+
+		.copyright p {
+			color: #fff;
+			font-weight: lighter;
+			font-size: 0.8rem;
+		}
+	}
+
+	@media (max-width: 420px) {
+		/* Navbar */
+
+		.logo h1 {
+			font-size: 2rem;
+		}
+
+		/* Header */
+
+		.hero {
+			height: 84vh;
+		}
+
+		.hero h1 {
+			font-size: 1.9rem;
+			line-height: 1.2;
+		}
+
+		.hero p {
+			font-size: 1.1rem;
+		}
+
+		.btn {
+			margin: 20px auto;
+			font-size: 1rem;
+			padding: 10px 22px;
+		}
+
+		/* Header - About Us */
+
+		.about-us {
+			padding: 70px;
+		}
+
+		.about-us h2 {
+			margin: 20px auto;
+			font-size: 1.4rem;
+		}
+
+		.about-us div p {
+			font-size: 1rem;
+			margin: 20px auto;
+		}
+
+		.about-us div .burger-image {
+			width: 100%;
+			margin: 20px auto;
+		}
+
+		.btn-smaller {
+			margin: 20px auto;
+			font-size: 1rem;
+		}
+
+		/* Review */
+
+		.container {
+			height: 90vh;
+		}
+
+		.container h2 {
+			font-size: 1.5rem;
+			margin: 80px auto;
+		}
+
+		.costumer {
+			margin: 45px 15px;
+			padding: 20px;
+		}
+
+		.costumer p {
+			font-size: 1rem;
+			margin-top: 0;
+		}
+
+		.costumer img {
+			width: 18%;
+			margin-top: 70px;
+		}
+
+		/* Footer */
+
+		.footer-link {
+			font-size: 0.9rem;
+			padding-top: 15px;
+		}
+
+		/* Copyright */
+
+		.copyright {
+			background: var(--Ketchup-color);
+			text-align: center;
+		}
+
+		.copyright p {
+			color: #fff;
+			font-weight: lighter;
+			font-size: 0.8rem;
+		}
+	}
+
+	@media (max-width: 420px) {
+		/* Navbar */
+
+		.logo h1 {
+			font-size: 2rem;
+		}
+
+		/* Header */
+
+		.hero {
+			height: 84vh;
+		}
+
+		.hero h1 {
+			font-size: 1.9rem;
+			line-height: 1.2;
+		}
+
+		.hero p {
+			font-size: 1.1rem;
+		}
+
+		.btn {
+			margin: 20px auto;
+			font-size: 1rem;
+			padding: 10px 22px;
+		}
+
+		/* Header - About Us */
+
+		.about-us {
+			padding: 70px;
+		}
+
+		.about-us h2 {
+			margin: 20px auto;
+			font-size: 1.4rem;
+		}
+
+		.about-us div p {
+			font-size: 1rem;
+			margin: 20px auto;
+		}
+
+		.about-us div .burger-image {
+			width: 100%;
+			margin: 20px auto;
+		}
+
+		.btn-smaller {
+			margin: 20px auto;
+			font-size: 1rem;
+		}
+
+		/* Review */
+
+		.container {
+			height: 90vh;
+		}
+
+		.container h2 {
+			font-size: 1.5rem;
+			margin: 80px auto;
+		}
+
+		.costumer {
+			margin: 45px 15px;
+			padding: 20px;
+		}
+
+		.costumer p {
+			font-size: 1rem;
+			margin-top: 0;
+		}
+
+		.costumer img {
+			width: 18%;
+			margin-top: 70px;
+		}
+
+		/* Footer */
+
+		.footer-link {
+			font-size: 0.9rem;
+			padding-top: 15px;
+		}
+
+		/* Copyright */
+
+		.copyright {
+			background: var(--Ketchup-color);
+			text-align: center;
+		}
+
+		.copyright p {
+			color: #fff;
+			font-weight: lighter;
+			font-size: 0.8rem;
+		}
+	}
+
+	@media (max-width: 353px) {
+		/* Navbar */
+
+		.logo h1 {
+			font-size: 1.5rem;
+		}
+
+		#navbar ul li {
+			font-size: 0.9rem;
+		}
+
+		/* Header */
+
+		.hero h1 {
+			font-size: 1.6rem;
+			line-height: 1.5;
+			padding: 10px;
+		}
+
+		.hero p {
+			font-size: 1rem;
+		}
+
+		.btn {
+			margin: 10px auto;
+			font-size: 1rem;
+			padding: 10px 20px;
+		}
+
+		/* About Us*/
+		.about-us {
+			padding: 30px;
+		}
+
+		/* Review */
+
+		.container {
+			height: 90vh;
+		}
+
+		.container h2 {
+			font-size: 1.4rem;
+
+			margin: 50px auto;
+		}
+
+		.costumer p {
+			font-size: 1rem;
+			margin-top: 0;
+		}
+
+		.costumer img {
+			width: 20%;
+			margin-top: 100px;
+		}
+
+		/* Footer */
+
+		footer {
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: column;
+			background: #333;
+			text-align: center;
+		}
+
+		/*-------------------------*/
+
+		.footer-link {
+			font-size: 1rem;
+			flex-direction: row;
+			order: -2;
+			margin-left: 120px;
+		}
+
+		/*-------------------------*/
+
+		.explore {
+			color: #fff;
+			padding: 30px;
+		}
+
+		.explore h3 {
+			font-weight: lighter;
+			line-height: 2.5;
+		}
+
+		.explore p a {
+			color: #fff;
+			font-weight: lighter;
+			font-size: 0.9rem;
+			line-height: 1.5;
+		}
+
+		/* Copyright */
+
+		.copyright p {
+			color: #fff;
+			font-weight: lighter;
+			font-size: 0.7rem;
+		}
+	}
+}

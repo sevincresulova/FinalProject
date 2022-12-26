@@ -1,0 +1,547 @@
+:root {
+	--Ketchup-color: #DA1202;
+	--mustard-color: #F9B044;
+	--off-white-color: #F1EAE3;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	font-family: Papercu, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+p {
+	font-size: 1.125rem;
+	line-height: 1.6;
+}
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+}
+
+/* Navbar */
+
+.logo {
+	top: 0;
+	text-align: center;
+	background:var(--Ketchup-color);
+}
+
+.logo h1 {
+	color: white;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+
+#navbar {
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	z-index: 10;
+}
+
+#navbar ul {
+	list-style: none;
+}
+
+#navbar ul li {
+	font-weight: 600;
+	color: var(--mustard-color);
+	display: inline-block;
+	padding: 1rem;
+	position: relative;
+}
+
+#navbar ul li a {
+	color: var(--mustard-color);
+	text-decoration: none;
+}
+
+/* Hide nested ul by default*/
+
+#navbar .nested-list {
+	display: none;
+}
+
+#navbar ul li:hover {
+	background: #fcf9f4;
+	color:var(--Ketchup-color);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+#navbar ul li:hover a {
+	color:var(--Ketchup-color);
+	transition: all 0.3s ease;
+}
+
+/* Nested dropdown show*/
+
+#navbar ul li:hover .nested-list {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 150px;
+	margin-top: 1rem;
+	text-align: left;
+	
+}
+
+#navbar ul li:hover .nested-list li {
+	display: block;
+	background: #fcf9f4;
+	
+}
+
+#navbar ul li:hover .nested-list li a {
+	color: var(--mustard-color);
+}
+
+#navbar ul li:hover .nested-list li a:hover {
+	color: var(--Ketchup-color);
+	transition: all 0.3s ease;
+}
+
+/* Menu */
+
+.menu {
+	background: linear-gradient(to top, black, rgba(0, 0, 0, 0.250)),
+	url(../Assets/images/resturant-1.jfif) no-repeat center center/cover;
+	height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+} 
+
+.text-primary {
+	color: var(--mustard-color);
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.price {
+	color: var(--Ketchup-color);
+}
+
+
+
+/* Kids Burger */
+
+.kids-burger {
+	background: #efefef;
+	display: flex;
+	flex-direction: row-reverse;
+	margin: 100px auto;
+	padding: 50px;
+	align-items: center;
+	border-radius: 30px;
+	box-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.6);
+}
+
+
+.kids-burger .info {
+	text-align: center;
+}
+
+
+.kids-burger .info h2 {
+	color: #333;
+	padding: 20px;
+	font-size: 1.8rem;
+	line-height: 1.6;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	
+}
+
+.kids-burger .info p {
+	padding: 20px;
+	color: #333;
+	font-weight: 600;
+}
+
+
+.kids-burger .kids-burger-img img {
+	width: 80%;
+	text-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.6);
+}
+
+.chicken-burger-img img {
+	width: 100%;
+	text-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+
+footer {
+	display: flex;
+	justify-content: space-evenly;
+	background: #333;
+}
+
+.information {
+	color: #fff;
+	padding: 30px;
+}
+
+.information h3 {
+	font-weight: lighter;
+	line-height: 2.5;
+}
+
+.information p {
+	font-size: 0.9rem;
+	line-height: 2.5;
+}
+
+/*-------------------------*/
+
+
+.footer-link {
+
+	display: flex;
+	flex-direction: column;
+	font-size: 1.25rem;
+	color: #fff;
+	margin-top: 25px;
+	cursor: pointer;
+}
+
+
+.footer-link i {
+	padding: 10px;
+}
+
+
+.footer-link:hover {
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+	color: var(--off-white-color);
+}
+
+
+
+/*-------------------------*/
+
+
+.explore {
+	color: #fff;
+	padding: 30px;
+}
+
+.explore h3 {
+	font-weight: lighter;
+	line-height: 2.5;
+}
+
+.explore p a {
+	color:#fff;
+	font-weight: lighter;
+	font-size: 0.9rem;
+	line-height: 1.5;
+}
+
+/* Copyright */
+
+.copyright {
+	background:var(--Ketchup-color);
+	text-align: center;
+}
+
+.copyright p {
+	color:#fff;
+	font-weight: lighter;
+	font-size: 0.8rem;
+}
+
+
+
+
+/* Mobile */
+
+@media (max-width: 950px) {
+
+
+/* Kids Burger */
+
+.kids-burger {
+	background: #efefef;
+	display: flex;
+	flex-direction: row-reverse;
+	margin: 100px auto;
+	padding: 25px;
+}
+
+
+.kids-burger .info h2 {
+	padding: 20px;
+	font-size: 1.6rem;
+	
+}
+
+.kids-burger .info p {
+	padding: 20px;
+	font-size: 1.125rem ;
+}
+
+
+.kids-burger .kids-burger-img img {
+	width: 60%;
+	text-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.6);
+}
+
+.chicken-burger-img img {
+	width: 80%;
+	text-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.6);
+}
+
+}
+
+
+@media (max-width: 890px) {
+
+
+	/* Kids Burger */
+	
+	.kids-burger {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	
+	
+	.kids-burger .info h2 {
+		font-size: 1.6rem;
+		
+	}
+	
+	.kids-burger .info p {
+		font-size: 1.125rem ;
+	}
+	
+	
+	.kids-burger .kids-burger-img img {
+		width: 60%;
+		margin-left: 80px;
+	}
+	
+	.chicken-burger-img img {
+		width: 80%;
+		margin-left: 40px;
+	}
+	
+	}
+
+
+	/* Mobile */
+
+@media (max-width: 610px) {
+
+			/* Navbar */
+
+			.logo h1 {
+				font-size: 2.2rem;
+			}
+
+
+	/* Kids Burger */
+	
+	.kids-burger {
+		display: flex;
+		flex-direction: column-reverse;
+		margin: 100px auto;
+		padding: 5px;
+	}
+	
+	
+	.kids-burger .info h2 {
+		padding: 20px;
+		font-size: 1.4rem;
+		
+	}
+	
+	.kids-burger .info p {
+		padding: 20px;
+		font-size: 1.1rem ;
+	}
+	
+	
+	.kids-burger .kids-burger-img img {
+		width: 50%;	
+		margin-left: 90px;
+	}
+	
+	.chicken-burger-img img {
+		width: 70%;
+		margin-left: 50px;
+	}
+	
+	}
+
+
+	/* Mobile */
+
+@media (max-width: 540px) {
+
+	/* Navbar */
+
+	.logo h1 {
+		font-size: 2rem;
+	}
+
+
+
+/* Kids Burger */
+
+.kids-burger {
+display: flex;
+flex-direction: column-reverse;
+margin: 100px 30px;
+padding: 30px;
+}
+
+
+.kids-burger .info h2 {
+padding: 20px;
+font-size: 1.2rem;
+
+}
+
+.kids-burger .info p {
+padding: 20px;
+font-size: 1rem ;
+}
+
+
+.kids-burger .kids-burger-img img {
+width: 50%;	
+margin-left: 90px;
+}
+
+.chicken-burger-img img {
+width: 70%;
+margin-left: 50px;
+}
+
+}
+
+
+@media (max-width: 400px) {
+
+	/* Navbar */
+
+	.logo h1 {
+		font-size: 1.5rem;
+	}
+
+	#navbar ul li {
+		font-size: 0.9rem;
+	}
+
+
+/* Kids Burger */
+
+.kids-burger {
+display: flex;
+flex-direction: column-reverse;
+margin: 100px 40px;
+padding: 10px;
+}
+
+
+.kids-burger .info h2 {
+padding: 20px;
+font-size: 1.2rem;
+
+}
+
+.kids-burger .info p {
+padding: 20px;
+font-size: 1rem ;
+}
+
+
+.kids-burger .kids-burger-img img {
+width: 60%;	
+margin-left: 70px;
+}
+
+.chicken-burger-img img {
+width: 80%;
+margin-left: 40px;
+}
+
+/* Footer */
+
+footer {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	background: #333;
+	text-align: center;
+}
+
+/*-------------------------*/
+
+.footer-link {
+	font-size: 1rem;
+	flex-direction: row;
+	order: -2;
+	margin-left: 120px;
+}
+
+/*-------------------------*/
+
+.explore {
+	color: #fff;
+	padding: 30px;
+}
+
+.explore h3 {
+	font-weight: lighter;
+	line-height: 2.5;
+}
+
+.explore p a {
+	color: #fff;
+	font-weight: lighter;
+	font-size: 0.9rem;
+	line-height: 1.5;
+}
+
+/* Copyright */
+
+.copyright p {
+	color: #fff;
+	font-weight: lighter;
+	font-size: 0.7rem;
+}
+
+
+
+}
+
+
+@media (max-width: 360px) {
+
+
+
+.kids-burger .kids-burger-img img {
+width: 60%;	
+margin-left: 45px;
+}
+
+.chicken-burger-img img {
+width: 80%;
+margin-left: 25px;
+}
+
+}
